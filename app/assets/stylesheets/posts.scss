@@ -22,6 +22,8 @@
    src: url('../assets/SFProDisplayBlackItalic.ttf');
 }
 
+@import url(//db.onlinewebfonts.com/c/469370c0a9ba735a099f09559e22973e?family=SF+Pro+Display);
+@font-face {font-family: "SF Pro Display"; src: url("//db.onlinewebfonts.com/t/469370c0a9ba735a099f09559e22973e.eot"); src: url("//db.onlinewebfonts.com/t/469370c0a9ba735a099f09559e22973e.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/469370c0a9ba735a099f09559e22973e.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/469370c0a9ba735a099f09559e22973e.woff") format("woff"), url("//db.onlinewebfonts.com/t/469370c0a9ba735a099f09559e22973e.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/469370c0a9ba735a099f09559e22973e.svg#SF Pro Display") format("svg"); }
 
 #postIndex {
     .page-header-posts-index {
@@ -166,7 +168,7 @@
 
 #newPost, #editPost {
     h1 {
-         font-family: 'SFProDisplayBlackItalic';
+         font-family: "SF Pro Display";
          background-color: #2973E1;
          color: white;
          padding: 50px 20px;
