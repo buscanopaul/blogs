@@ -1,3 +1,184 @@
 // Place all the styles related to the Posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+@font-face {
+   font-family: 'SFProDisplayBlackItalic';
+   src: url('../assets/SFProDisplayBlackItalic.ttf');
+}
+
+@font-face {
+   font-family: 'SFProText-Medium';
+   src: url('../fonts/SFProText-Medium.ttf');
+}
+
+@font-face {
+   font-family: 'SFProText-Regular';
+   src: url('../fonts/SFProText-Regular.ttf');
+}
+
+
+#postIndex {
+    .page-header-posts-index {
+        background-image: url(https://www.apple.com/v/mac/home/bf/images/overview/macos/security__f0bb6423ze6a_large_2x.jpg);
+        background-position: bottom;
+        background-repeat: no-repeat;
+        background-size: 50%;
+        background-color: #FBFBFD !important;
+
+        .page-header {
+            margin-top: 0 !important;
+            padding-top: 0 !important;
+            padding-bottom: 250px !important;
+            width: 60%;
+
+            h1 {
+                font-family: 'SFProText-Medium'; 
+                font-size: 56px;
+            }
+
+            p {
+                font-size: 28px;
+                line-height: 38px;
+                font-family: 'SFProText-Regular';
+            }
+        }
+    }
+    
+    .cards {
+        flex-wrap: wrap;
+        .single-card {
+            width: 48.7%;
+            margin-bottom: 20px;
+
+            &:nth-child(1) {
+                background-color: #000 !important;
+                
+                h2 {
+                    color: white;
+                }
+
+                p {
+                    color: white;
+                }
+            }
+
+            &:nth-child(2) {
+                background-color: #FBFBFD !important;
+
+                h2 {
+                    color: black;
+                }
+
+                p {
+                    color: black;
+                }
+            }
+
+            &:nth-child(3) {
+                background-color: #FBFBFD !important;
+
+                h2 {
+                    color: black;
+                }
+
+                p {
+                    color: black;
+                }
+            }
+
+            &:nth-child(4) {
+                background-color: #F2ECDD !important;
+
+                h2 {
+                    color: black;
+                }
+
+                p {
+                    color: black;
+                }
+            }
+
+            h2 {
+                font-family: 'SFProText-Medium';
+                font-size: 40px;
+                line-height: 40px;
+            }
+
+            p {
+                font-size: 21px;
+                line-height: 31px;
+                font-family: 'SFProText-Regular'; 
+            }
+
+            .card-btn {
+                display: flex;
+                justify-content: center;
+
+                a {
+                    margin: 0 10px;
+                    text-decoration: none;
+                    font-size: 17px;
+                    line-height: 27px;
+                    color: #0d6efd;
+
+                    &:hover {
+                        text-decoration: underline;
+                        background: none;
+                    }
+
+                    i {
+                        vertical-align: middle;
+                    }
+                }
+            }
+
+            .card-image {
+                background-image: url(https://images.unsplash.com/photo-1585241936939-be4099591252?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+        }
+    }
+}
+
+#singlePost {
+    h1 {
+         font-family: 'SFProText-Medium';
+         padding-top: 30px;
+    }
+
+    h5 {
+         font-family: 'SFProText-Regular'; 
+         color: #757575;
+    }
+
+    p {
+         font-family: 'SFProText-Regular'; 
+    }
+}
+
+#newPost, #editPost {
+    h1 {
+         font-family: 'SFProDisplayBlackItalic';
+         background-color: #2973E1;
+         color: white;
+         padding: 50px 20px;
+         text-align: center;
+         font-size: 80px;
+         line-height: 90px;
+    }
+}
+
+.index-posts {
+    .container {
+        .row {
+            .card {
+               margin: 10px;
+               margin-bottom: 20px;
+            }
+        }
+    }
+}
+
+

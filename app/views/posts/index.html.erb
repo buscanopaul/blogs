@@ -1,31 +1,30 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Posts</h1>
+<div id="postIndex">
+  <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light page-header-posts-index">
+      <div class="col-md-5 p-lg-5 mx-auto my-5 page-header">
+        <h1 class="display-4 fw-normal">Welcome to my Blog</h1>
+        <p class="lead fs-9">Blast past fast</p>
+        <%= link_to "New Post", new_post_path, class: "btn btn-primary text-light" %>
+      </div>
+      <div class="product-device shadow-sm d-none d-md-block"></div>
+      <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
+  </div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Title</th>
-      <th>Content</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @posts.each do |post| %>
-      <tr>
-        <td><%= post.name %></td>
-        <td><%= post.title %></td>
-        <td><%= post.content %></td>
-        <td><%= link_to 'Show', post %></td>
-        <td><%= link_to 'Edit', edit_post_path(post) %></td>
-        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+  <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3 cards">
+    <% Post.order("created_at desc").limit(4).each do |post| %>
+      <div class="bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden single-card">
+        <div class="my-3 py-3">
+          <h2 class="display-5"><%= post.title %></h2>
+          <p class="lead"><%= post.subtitle %></p>
+          <div class="card-btn">
+            <%= link_to "Show <i class=\"fal fa-angle-right\"></i>".html_safe, post %>
+            <%= link_to "Edit <i class=\"fal fa-angle-right\"></i>".html_safe, edit_post_path(post) %>
+            <%= link_to "Delete <i class=\"fal fa-angle-right\"></i>".html_safe, post, method: :delete, data: { confirm: "Are you sure?" } %>
+          </div>
+        </div>
+        <div class="bg-light shadow-sm mx-auto card-image" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0; background-image: url(<%= url_for(post.file) %>);"></div>
+      </div>
     <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Post', new_post_path %>
+  </div>
+</div>
